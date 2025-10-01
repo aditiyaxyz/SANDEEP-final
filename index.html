@@ -1,233 +1,80 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
-  <title>Sandeep Tomar — Financial Strategist</title>
-
-  <!-- Fonts & icons -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-  <!-- Core CSS -->
-  <link rel="stylesheet" href="assets/style.css">
-
-  <meta name="description" content="Sandeep Tomar — AMFI Registered Research Analyst & Mutual Fund Distributor. Workshops, advisory and long-term wealth frameworks.">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sandeep Premium Portfolio</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div id="site" class="site">
+  <!-- Hero Section -->
+  <section class="hero">
+    <canvas id="particle-canvas"></canvas>
+    <div class="hero-content">
+      <h1 class="stagger-text">Hi, I'm Sandeep</h1>
+      <p class="subheading">Creating digital experiences with elegance</p>
+      <a href="#contact" class="btn-glow">Connect</a>
+    </div>
+    <nav class="hero-nav">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </section>
 
-    <header class="site-header" id="siteHeader">
-      <div class="container header-inner">
-        <a class="brand" href="#home" aria-label="Sandeep Tomar Home">
-          <span class="brand-name">Sandeep</span><span class="brand-accent">Tomar</span>
-        </a>
-
-        <nav class="nav" aria-label="Primary navigation">
-          <ul class="nav-list" id="navList">
-            <li><a class="nav-link" href="#home">Home<span class="nav-underline"></span></a></li>
-            <li><a class="nav-link" href="#about">About<span class="nav-underline"></span></a></li>
-            <li><a class="nav-link" href="#certifications">Certifications<span class="nav-underline"></span></a></li>
-            <li><a class="nav-link" href="#interests">Interests<span class="nav-underline"></span></a></li>
-            <li><a class="nav-link" href="#contact">Contact<span class="nav-underline"></span></a></li>
-          </ul>
-        </nav>
-
-        <div class="header-actions">
-          <a class="btn small" href="public/contact.vcf" download>Download vCard</a>
-          <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-label="Toggle navigation">
-            <i class="fas fa-bars"></i>
-          </button>
-        </div>
+  <!-- About Section -->
+  <section id="about" class="about">
+    <div class="about-content">
+      <div class="about-image">
+        <img src="assets/images/profile.jpg" alt="Sandeep">
       </div>
-    </header>
-
-    <main>
-      <section id="home" class="hero section">
-        <!-- SVG particle field (inline) -->
-        <svg class="particles" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-          <defs>
-            <radialGradient id="g1" cx="50%" cy="50%">
-              <stop offset="0%" stop-color="#d4af37" stop-opacity="0.7"/>
-              <stop offset="100%" stop-color="#d4af37" stop-opacity="0"/>
-            </radialGradient>
-          </defs>
-          <g id="particlesLayer"></g>
-        </svg>
-
-        <div class="hero-media" aria-hidden="true">
-          <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=2000&q=60" alt="" class="hero-bg">
-          <div class="hero-overlay"></div>
-        </div>
-
-        <div class="container hero-grid">
-          <div class="hero-left">
-            <div class="eyebrow reveal" data-reveal>Founder · Aegis Financial</div>
-            <h1 class="hero-title reveal" data-reveal><span class="shimmer">Sandeep Tomar</span></h1>
-            <div class="subtitle reveal" data-reveal>AMFI Registered Research Analyst & Mutual Fund Distributor</div>
-            <p class="hero-desc reveal" data-reveal>
-              Public speaker & educator on market frameworks. Focused on long-term wealth planning, discipline & compounding.
-            </p>
-            <div class="hero-ctas reveal" data-reveal>
-              <a class="btn primary" id="ctaContact" href="#contact">Get In Touch</a>
-              <a class="btn ghost" href="#certifications">Credentials</a>
-            </div>
-          </div>
-
-          <aside class="hero-right">
-            <div class="portrait-card" id="portraitCard" data-tilt data-reveal>
-              <div class="portrait-frame">
-                <img src="public/founder-1.png" alt="Portrait of Sandeep Tomar" loading="lazy">
-              </div>
-              <div class="portrait-info">
-                <h3>Sandeep Tomar</h3>
-                <p>Founder — Aegis Financial</p>
-              </div>
-              <div class="portrait-badge">AMFI</div>
-            </div>
-          </aside>
-        </div>
-      </section>
-
-      <section id="about" class="about section">
-        <div class="container">
-          <h2 class="section-title reveal" data-reveal>Profile Summary</h2>
-
-          <div class="about-grid">
-            <div class="about-text">
-              <h3 class="reveal" data-reveal>Strategy, Discipline, Habit</h3>
-              <p class="reveal" data-reveal>
-                Sandeep blends market frameworks with behavioural insight. He runs workshops and advises clients on sustainable long-term portfolios — emphasizing clarity, confidence, and compounding.
-              </p>
-
-              <ul class="highlights reveal" data-reveal>
-                <li><strong>Research Analyst</strong> — AMFI registered</li>
-                <li><strong>Mutual Fund Distributor</strong> — advisory & portfolio design</li>
-                <li><strong>Workshops</strong> — behavioural & framework-driven</li>
-              </ul>
-
-              <div class="photo-instructions reveal" data-reveal>
-                <strong>Photo instructions</strong>
-                <p>PNG/JPG, portrait orientation, 600–800px tall, min 400px wide. Save compressed (&lt;300KB). Drop at <code>public/founder-1.png</code>.</p>
-              </div>
-            </div>
-
-            <div class="about-visual reveal" data-reveal>
-              <div class="visual-frame">
-                <img src="public/image.jpg" alt="Sandeep portrait alt" loading="lazy">
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="certifications" class="certifications section">
-        <div class="container">
-          <h2 class="section-title reveal" data-reveal>Certifications & Achievements</h2>
-
-          <div class="cert-grid">
-            <article class="cert-card reveal" data-reveal>
-              <div class="cert-accent"></div>
-              <h3>AMFI Registered Research Analyst</h3>
-              <p>Certified research analyst with expertise in financial markets and investment strategies.</p>
-            </article>
-
-            <article class="cert-card reveal" data-reveal>
-              <div class="cert-accent"></div>
-              <h3>AMFI Registered Mutual Fund Distributor</h3>
-              <p>Authorized distributor providing expert mutual fund advice and portfolio management.</p>
-            </article>
-
-            <article class="cert-card reveal" data-reveal>
-              <div class="cert-accent"></div>
-              <h3>Workshops & Education</h3>
-              <p>Workshops on market psychology and disciplined frameworks for investors.</p>
-            </article>
-
-            <article class="cert-card reveal" data-reveal>
-              <div class="cert-accent"></div>
-              <h3>Trusted Wealth Advisor</h3>
-              <p>Advisor for long-term wealth planning and mutual fund strategy implementation.</p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section id="interests" class="interests section">
-        <div class="container">
-          <h2 class="section-title reveal" data-reveal>Personal Interests</h2>
-
-          <div class="interests-grid">
-            <div class="interests-text">
-              <h3 class="reveal" data-reveal>Playing Cards</h3>
-              <p class="reveal" data-reveal>
-                Strategic parallels between card games and investing — probability, patience and composure. A hobby that reinforces disciplined decision-making.
-              </p>
-            </div>
-
-            <div class="interests-visual reveal" data-reveal>
-              <div class="photo-block">
-                <img src="public/cards.jpg" alt="Playing cards" loading="lazy">
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="contact" class="contact section">
-        <div class="container">
-          <h2 class="section-title reveal" data-reveal>Contact</h2>
-
-          <form class="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-            <input type="hidden" name="form-name" value="contact">
-            <p class="hidden"><label>Don’t fill this out: <input name="bot-field"></label></p>
-
-            <div class="contact-grid">
-              <label class="contact-card reveal" data-reveal>
-                <span class="contact-icon"><i class="fas fa-user"></i></span>
-                <input name="name" type="text" placeholder="Your name" required>
-              </label>
-
-              <label class="contact-card reveal" data-reveal>
-                <span class="contact-icon"><i class="fas fa-envelope"></i></span>
-                <input name="email" type="email" placeholder="Your email" required>
-              </label>
-
-              <label class="contact-card reveal" data-reveal style="grid-column:1 / -1">
-                <span class="contact-icon"><i class="fas fa-message"></i></span>
-                <textarea name="message" rows="4" placeholder="Message"></textarea>
-              </label>
-
-              <div style="grid-column:1 / -1;display:flex;justify-content:center">
-                <button class="btn primary" type="submit">Send Message</button>
-              </div>
-            </div>
-          </form>
-
-        </div>
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      <div class="container footer-inner">
-        <div class="footer-brand">
-          <span class="brand-name">Sandeep</span><span class="brand-accent">Tomar</span>
-        </div>
-        <div class="footer-links">
-          <a href="#home">Home</a>
-          <a href="#about">About</a>
-          <a href="#contact">Contact</a>
-          <a href="#certifications">Certifications</a>
-        </div>
-        <div class="copyright">© 2023 Sandeep Tomar. All Rights Reserved.</div>
+      <div class="about-text">
+        <h2>About Me</h2>
+        <p>I’m a digital experience designer specializing in elegant, luxurious, and smooth web solutions. My work merges aesthetics with functionality to create premium experiences.</p>
       </div>
-    </footer>
+    </div>
+  </section>
 
-  </div>
+  <!-- Projects Section -->
+  <section id="projects" class="projects">
+    <h2>My Work</h2>
+    <div class="project-cards">
+      <div class="project-card">
+        <img src="assets/images/project1.jpg" alt="Project 1">
+        <h3>Project One</h3>
+        <p>Luxury UI/UX redesign for a high-end brand.</p>
+      </div>
+      <div class="project-card">
+        <img src="assets/images/project2.jpg" alt="Project 2">
+        <h3>Project Two</h3>
+        <p>Premium interactive landing page development.</p>
+      </div>
+    </div>
+  </section>
 
-  <!-- GSAP for richer hero entrance -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-  <!-- App JS -->
-  <script src="assets/app.js"></script>
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <h2>Contact Me</h2>
+    <form action="#" class="contact-form">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Email Address" required>
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit" class="btn-glow">Send</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Sandeep. All Rights Reserved.</p>
+    <div class="social-icons">
+      <a href="#"><img src="assets/icons/twitter.svg" alt="Twitter"></a>
+      <a href="#"><img src="assets/icons/linkedin.svg" alt="LinkedIn"></a>
+      <a href="#"><img src="assets/icons/github.svg" alt="GitHub"></a>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
 </body>
 </html>
