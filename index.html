@@ -1,0 +1,196 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sandeep Tomar | Futuristic Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --primary: #00f6ff;
+  --secondary: #111;
+  --accent: #0ff;
+  --bg: #0a0a0a;
+  --text: #f5f5f5;
+}
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  overflow-x: hidden;
+}
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(10,10,10,0.8);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+}
+header h1 {
+  color: var(--primary);
+  font-weight: 700;
+}
+nav a {
+  color: var(--text);
+  margin-left: 20px;
+  text-decoration: none;
+  font-weight: 600;
+}
+nav a:hover { color: var(--accent); }
+section {
+  padding: 120px 40px;
+  min-height: 100vh;
+}
+h2 {
+  font-size: 2.5em;
+  color: var(--primary);
+  margin-bottom: 20px;
+}
+.profile-summary {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+.profile-summary img {
+  max-width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 0 30px var(--accent);
+}
+.summary-text {
+  font-size: 1.1em;
+}
+.contact { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+.contact .card {
+  background: rgba(255,255,255,0.05);
+  padding: 20px;
+  border-radius: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.contact .card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 0 30px var(--accent);
+}
+.certifications, .vlogs { list-style: none; }
+.certifications li, .vlogs li { padding: 10px; border-left: 4px solid var(--primary); margin-bottom: 10px; }
+footer { text-align: center; padding: 20px; background: rgba(10, 10, 10, 0.8); font-size: 0.9em; }
+.canvas-bg { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; }
+.floating-img { position: absolute; border-radius: 50%; width: 120px; pointer-events: none; }
+@media (max-width: 900px) { .profile-summary { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+
+<canvas id="canvas-bg" class="canvas-bg"></canvas>
+
+<header>
+  <h1>Sandeep Tomar</h1>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+    <a href="#certifications">Certifications</a>
+    <a href="#vlogs">Vlogs</a>
+    <a href="#hobbies">Hobbies</a>
+  </nav>
+</header>
+
+<section id="about">
+  <h2>About</h2>
+  <div class="profile-summary">
+    <img src="public/image1.png" alt="Sandeep Tomar">
+    <div class="summary-text">
+      <p><strong>Name:</strong> Sandeep Tomar</p>
+      <p><strong>Title:</strong> Founder of Aegis Financial</p>
+      <p><strong>Credentials:</strong> AMFI Registered Research Analyst, AMFI Registered Mutual Fund Distributor</p>
+      <p><strong>Philosophy:</strong> “Clarity. Confidence. Compounding.” Sandeep believes strategy is only half the story. The deeper truth lies in a blend of principles, discipline, and habit formation. Compounding isn’t just financial—it’s how perspective transforms outcomes.</p>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <div class="contact">
+    <div class="card"><strong>Phone:</strong> +91 93101 14852</div>
+    <div class="card"><strong>Email:</strong> sandeepto@rediffmail.com</div>
+    <div class="card"><strong>Instagram:</strong> @sandeep_tomar_04</div>
+  </div>
+</section>
+
+<section id="certifications">
+  <h2>Certifications & Achievements</h2>
+  <ul class="certifications">
+    <li>AMFI Registered Research Analyst</li>
+    <li>AMFI Registered Mutual Fund Distributor</li>
+    <li>Conducts workshops and educational sessions on financial discipline and market psychology</li>
+    <li>Trusted advisor for long-term wealth planning and mutual fund strategy</li>
+  </ul>
+</section>
+
+<section id="vlogs">
+  <h2>Vlogs</h2>
+  <ul class="vlogs">
+    <li>Volatility as a Friend — Embracing uncertainty as a strategic advantage</li>
+    <li>The Compounding Mindset — Building habits that scale over time</li>
+    <li>Frameworks Over Forecasts — Prioritizing structure over speculation</li>
+  </ul>
+</section>
+
+<section id="hobbies">
+  <h2>Hobbies</h2>
+  <p><strong>Playing cards:</strong> Sandeep uses card games as a metaphor for probability, patience, and psychological insight—skills that translate directly into disciplined investing and long-term planning.</p>
+</section>
+
+<footer>
+  © 2025 Sandeep Tomar | Designed with ❤️
+</footer>
+
+<img src="public/image1.png" class="floating-img" id="float1">
+<img src="public/image2.png" class="floating-img" id="float2">
+<img src="public/image3.png" class="floating-img" id="float3">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script>
+gsap.from("header", {y: -100, opacity: 0, duration: 1});
+gsap.from("section", {opacity: 0, y: 50, duration: 1, stagger: 0.3});
+
+const scene = new THREE.Scene();
+const camera = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeight, 0.1, 1000);
+const renderer = new THREE.WebGLRenderer({canvas: document.getElementById("canvas-bg"), alpha: true});
+renderer.setSize(window.innerWidth, window.innerHeight);
+camera.position.z = 5;
+
+const geometry = new THREE.BufferGeometry();
+const particles = 2000;
+const positions = new Float32Array(particles * 3);
+for(let i = 0; i < particles*3; i++) positions[i] = (Math.random() - 0.5) * 10;
+geometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+const material = new THREE.PointsMaterial({color: 0x00f6ff, size: 0.05});
+const pointCloud = new THREE.Points(geometry, material);
+scene.add(pointCloud);
+
+function animateParticles() {
+  requestAnimationFrame(animateParticles);
+  pointCloud.rotation.y += 0.001;
+  renderer.render(scene, camera);
+}
+animateParticles();
+
+window.addEventListener("resize", () => {
+  camera.aspect = window.innerWidth/window.innerHeight;
+  camera.updateProjectionMatrix();
+  renderer.setSize(window.innerWidth, window.innerHeight);
+});
+
+gsap.to("#float1", {x: 300, y: 100, duration: 10, repeat: -1, yoyo: true, ease: "sine.inOut"});
+gsap.to("#float2", {x: -300, y: -150, duration: 12, repeat: -1, yoyo: true, ease: "sine.inOut"});
+gsap.to("#float3", {x: 200, y: -100, duration: 14, repeat: -1, yoyo: true, ease: "sine.inOut"});
+</script>
+</body>
+</html>
