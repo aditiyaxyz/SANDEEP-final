@@ -1,7 +1,11 @@
 BEGIN:VCARD
 VERSION:3.0
 FN:Sandeep Tomar
+N:Tomar;Sandeep;;;
 ORG:Aegis Financial
-TEL;TYPE=WORK,VOICE:+91-9310114852
+TITLE:Founder, Educator & Financial Strategist
+TEL;TYPE=CELL:+919310114852
 EMAIL:sandeepto@rediffmail.com
+URL:https://instagram.com/sandeep_tomar_04
+NOTE:Clarity. Confidence. Compounding. | AMFI Registered Research Analyst & Mutual Fund Distributor
 END:VCARD
